@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Docomplete",
+  "description": "This extension enables autocomplete for all input[type=password].",
+  "version": "1.0",
+
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["docomplete.js"]
+    }
+  ]
+}
