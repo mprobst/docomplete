@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Docomplete",
-  "description": "This extension enables autocomplete for all input[type=password].",
+  "description": "This extension re-enables autocomplete for password fields on websites that intentionally disable it (autocomplete=off).",
   "version": "1.0",
 
   "permissions": [
@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["docomplete.js"]
+      "js": ["docomplete.js"],
+      "all_frames": true
     }
   ]
 }
